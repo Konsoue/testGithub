@@ -81,6 +81,13 @@ body{
     line-height: 1.4;
     color: #4d4d4d;
 }
+@media  only screen and (max-width:1000px){
+    .beside{
+        left: -285px;
+        transition: left 0.8s;
+        -webkit-transition:left 0.8s;
+    }
+}
 /* 正文 */
 .contain{
     width: 500px;
