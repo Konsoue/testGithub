@@ -40,7 +40,6 @@ function showSoueLs(){
         }else{
             clearOperate.style.display = "block";
         }
-        
     }
 }
 /* this.localStorage.clear(); */
@@ -246,7 +245,20 @@ function deleteLi(e){
     select.remove();
     activeshow();
     footShow();
+    var count = 0;
+    for(var i = 0,len = soueLS.length;i < len;i++){
+        if(soueLS[i].completed == "completed"){
+            count++;
+        }
+    }
+    console.log('wai');
+    if(count == soueLS.length){
+        console.log('asd');
+        door.style.color = "black";
+        door.count = 1;
+    }
 }
+
 /* 修改soueLSValue的内容 */
 function reviseSoueLS(word,idNum){
     for(var i = 0,len = soueLS.length;i < len;i++){
