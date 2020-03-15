@@ -82,7 +82,7 @@ body{
     line-height: 1.4;
     color: #4d4d4d;
 }
-@media  only screen and (max-width:1000px){
+@media  only screen and (max-width:1150px){
     .beside{
         left: -285px;
         transition: left 0.8s;
@@ -92,7 +92,7 @@ body{
 /* 正文 */
 .contain{
     width: 500px;
-    margin: 0px 59% 0 41%;
+    margin: 0px auto;
    /*  background-color: skyblue; */
    position: relative;
 
@@ -194,8 +194,24 @@ body{
     overflow: hidden; */
 }
 .contain .list .toggle-list .completed >div{
+    /* color: #d9d9d9; */
+    animation-name: word;
+    animation-duration: 0.5s;
     color: #d9d9d9;
     text-decoration: line-through;
+    /* text-decoration: line-through; */
+}
+@keyframes word{
+    0%{
+        color: black;
+    }
+    50%{
+        color: darkgray;
+    }
+    100%{
+        color: #d9d9d9;
+        text-decoration: line-through;
+    }
 }
 .contain .list .toggle-list>li>button{
     color:#b83f45;

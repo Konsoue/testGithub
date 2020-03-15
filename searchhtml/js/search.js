@@ -40,6 +40,7 @@ function showSoueLs(){
         }else{
             clearOperate.style.display = "block";
         }
+        
     }
 }
 /* this.localStorage.clear(); */
@@ -242,9 +243,9 @@ function deleteLi(e){
     var select = selectbutton.parentElement;
     var idNum = select.getAttribute('data-id');
     deleteLSValue(idNum);
+   
     select.remove();
     activeshow();
-    footShow();
     var count = 0;
     for(var i = 0,len = soueLS.length;i < len;i++){
         if(soueLS[i].completed == "completed"){
@@ -255,10 +256,10 @@ function deleteLi(e){
     if(count == soueLS.length){
         console.log('asd');
         door.style.color = "black";
-        door.count = 1;
+        door.count = 1; 
     }
+    footShow();
 }
-
 /* 修改soueLSValue的内容 */
 function reviseSoueLS(word,idNum){
     for(var i = 0,len = soueLS.length;i < len;i++){
@@ -349,6 +350,7 @@ function footShow(){
         footer.style.display = "none";
         door.style.display = "none";
         door.style.color = "#e6e6e6";
+        clearOperate.style.display = "none";
     }
 }
 for(var i = 0;i < 3;i++){
